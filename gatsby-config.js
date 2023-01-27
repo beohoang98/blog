@@ -127,7 +127,7 @@ module.exports = {
         // https://css-tricks.com/meta-theme-color-and-trickery/
         theme_color: `#b84000`,
         display: `standalone`,
-        icon: `/apple-touch-icon.png`, // This path is relative to the root of the site.
+        icon: `static/apple-touch-icon.png`, // This path is relative to the root of the site.
         icons: [
           {
             src: "/android-chrome-192x192.png",
