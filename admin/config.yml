@@ -1,0 +1,38 @@
+backend:
+  name: github
+  branch: master
+  repo: beohoang98/blog
+
+summary: "A simple blog example using Netlify CMS with Gatsby"
+locale: en
+media_folder: "content/uploads"
+public_folder: "/uploads"
+publish_mode: editorial_workflow
+display_url: https://beohoang98.github.io/blog
+logo_url: https://beohoang98.github.io/blog/favicon-32x32.png
+
+collections:
+  - name: blog
+    label: Blog
+    folder: content/blog
+    nested:
+      depth: 100
+    create: true
+    delete: true
+    path: "{{year}}/{{month}}/{{day}}/{{category}}/{{slug}}"
+    fields:
+      - { label: "Category", name: "category", widget: "string", pattern: ["(note|reading)", "Must have `type`"] }
+      - { label: "Tags", name: "tags", widget: "list" }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "string", required: false }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Image", name: "image", widget: "image", required: false }
+      - { label: "Body", name: "body", widget: "markdown" }
+  - name: pages
+    label: Pages
+    folder: content/pages
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
