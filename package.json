@@ -8,15 +8,14 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "dependencies": {
-    "@fontsource/merriweather": "^4.5.14",
-    "@fontsource/montserrat": "^4.5.14",
+    "@fontsource/lato": "^4.5.10",
+    "@fontsource/lora": "^4.5.13",
     "gatsby": "^5.5.0",
     "gatsby-plugin-dark-mode": "^1.1.2",
     "gatsby-plugin-feed": "^5.5.0",
     "gatsby-plugin-image": "^3.5.0",
     "gatsby-plugin-manifest": "^5.5.0",
     "gatsby-plugin-sharp": "^5.5.0",
-    "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-remark-images": "^7.5.0",
     "gatsby-remark-prismjs": "^7.5.0",
     "gatsby-remark-responsive-iframe": "^6.5.0",

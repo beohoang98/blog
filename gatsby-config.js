@@ -143,14 +143,6 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-web-font-loader`,
-      options: {
-        google: {
-          families: [`Lato`, `Lora`],
-        },
-      },
-    },
-    {
       resolve: `gatsby-plugin-dark-mode`,
     },
   ],

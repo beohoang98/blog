@@ -1485,17 +1485,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@fontsource/merriweather@npm:^4.5.14":
-  version: 4.5.14
-  resolution: "@fontsource/merriweather@npm:4.5.14"
-  checksum: c91aca76c8a5e1fb1e7c0d31b064d7b1f8f0eb9c80d0d17a6f7dcd466074dddf62956009377e2429843ca282b404f98df68c5afe2d941d08d1d9a33cb4a3b3c5
+"@fontsource/lato@npm:^4.5.10":
+  version: 4.5.10
+  resolution: "@fontsource/lato@npm:4.5.10"
+  checksum: ab0a9a9e4f879f7639ad12639d1a1c2798677a9bd8af23303ca8a94af772ec5afbd4bbdfe298538bf38651c4c63b934b946e8e7c1083eb75fb453058496d233e
   languageName: node
   linkType: hard
 
-"@fontsource/montserrat@npm:^4.5.14":
-  version: 4.5.14
-  resolution: "@fontsource/montserrat@npm:4.5.14"
-  checksum: c5ee54bdc7abb378240d613a0dd59ce4879bdfbe6c5168b324245dd3e031a410e321289bf9be614265e16d7319f16d39090b8f00f54e631c6d35e9cb2f8d652a
+"@fontsource/lora@npm:^4.5.13":
+  version: 4.5.13
+  resolution: "@fontsource/lora@npm:4.5.13"
+  checksum: ec822b845168c1d005a1403e4651dbded658d2cb7ce011ebe75493e07df1138796a36f29de96a6d7f2f932d8c626b1a7f49d754f614d633489e3af020b99113f
   languageName: node
   linkType: hard
 
@@ -3974,16 +3974,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"babel-runtime@npm:^6.26.0":
-  version: 6.26.0
-  resolution: "babel-runtime@npm:6.26.0"
-  dependencies:
-    core-js: ^2.4.0
-    regenerator-runtime: ^0.11.0
-  checksum: 8aeade94665e67a73c1ccc10f6fd42ba0c689b980032b70929de7a6d9a12eb87ef51902733f8fefede35afea7a5c3ef7e916a64d503446c1eedc9e3284bd3d50
-  languageName: node
-  linkType: hard
-
 "bail@npm:^1.0.0":
   version: 1.0.5
   resolution: "bail@npm:1.0.5"
@@ -4059,15 +4049,14 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "blog@workspace:."
   dependencies:
-    "@fontsource/merriweather": ^4.5.14
-    "@fontsource/montserrat": ^4.5.14
+    "@fontsource/lato": ^4.5.10
+    "@fontsource/lora": ^4.5.13
     gatsby: ^5.5.0
     gatsby-plugin-dark-mode: ^1.1.2
     gatsby-plugin-feed: ^5.5.0
     gatsby-plugin-image: ^3.5.0
     gatsby-plugin-manifest: ^5.5.0
     gatsby-plugin-sharp: ^5.5.0
-    gatsby-plugin-web-font-loader: ^1.0.4
     gatsby-remark-images: ^7.5.0
     gatsby-remark-prismjs: ^7.5.0
     gatsby-remark-responsive-iframe: ^6.5.0
@@ -4948,13 +4937,6 @@ __metadata:
   version: 3.27.2
   resolution: "core-js-pure@npm:3.27.2"
   checksum: 7cb24502a782a032ffa2af6e84abfcfeffa0c30e84c38f4d0a1d7567c8c86e2d36a7554a00ca47762606c84d2a86d99662a7158e9f4df989f3fe3c7e7c09fa45
-  languageName: node
-  linkType: hard
-
-"core-js@npm:^2.4.0":
-  version: 2.6.12
-  resolution: "core-js@npm:2.6.12"
-  checksum: 44fa9934a85f8c78d61e0c8b7b22436330471ffe59ec5076fe7f324d6e8cf7f824b14b1c81ca73608b13bdb0fef035bd820989bf059767ad6fa13123bb8bd016
   languageName: node
   linkType: hard
 
@@ -7246,16 +7228,6 @@ __metadata:
     gatsby: ^5.0.0-next
     graphql: ^16.0.0
   checksum: 2edfad50d3dba1ad8c60b9dbfc0ecb7b8b3062ffb8ecb86914b4023fcb69ea00025c1a40e4adcd9a8ecfc49f8d5f338fcd7790f8c3f7b11d99367b8ca7762177
-  languageName: node
-  linkType: hard
-
-"gatsby-plugin-web-font-loader@npm:^1.0.4":
-  version: 1.0.4
-  resolution: "gatsby-plugin-web-font-loader@npm:1.0.4"
-  dependencies:
-    babel-runtime: ^6.26.0
-    webfontloader: ^1.6.28
-  checksum: 7cb4df8ed58d56656150ef7d5277f9acec91a7153afeccdfc1cac75482a25a8d926957a7892ccfbaf3ab743b02b3c9ca5a95e06f3c69370b53426616ed0d4359
   languageName: node
   linkType: hard
 
@@ -12095,13 +12067,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"regenerator-runtime@npm:^0.11.0":
-  version: 0.11.1
-  resolution: "regenerator-runtime@npm:0.11.1"
-  checksum: 3c97bd2c7b2b3247e6f8e2147a002eb78c995323732dad5dc70fac8d8d0b758d0295e7015b90d3d444446ae77cbd24b9f9123ec3a77018e81d8999818301b4f4
-  languageName: node
-  linkType: hard
-
 "regenerator-runtime@npm:^0.13.11, regenerator-runtime@npm:^0.13.7":
   version: 0.13.11
   resolution: "regenerator-runtime@npm:0.13.11"
@@ -14193,13 +14158,6 @@ __metadata:
   version: 1.1.4
   resolution: "web-namespaces@npm:1.1.4"
   checksum: 5149842ccbfbc56fe4f8758957b3f8c8616a281874a5bb84aa1b305e4436a9bad853d21c629a7b8f174902449e1489c7a6c724fccf60965077c5636bd8aed42b
-  languageName: node
-  linkType: hard
-
-"webfontloader@npm:^1.6.28":
-  version: 1.6.28
-  resolution: "webfontloader@npm:1.6.28"
-  checksum: cbebbe593cb0d27dbb4d418f7f96bd9893024f1f2062e858af76209b6524e25d766964b6e2a724f3b694fadef661dd3a01065455a96df05337b3281ca09ab656
   languageName: node
   linkType: hard
 
