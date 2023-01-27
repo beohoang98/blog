@@ -17,6 +17,7 @@ const BlogPostTemplate: FC<PageProps<Queries.BlogPostBySlugQuery>> = ({
         className="blog-post"
         itemScope
         itemType="http://schema.org/Article"
+        role="article"
       >
         <header>
           <h1 itemProp="headline">{post?.frontmatter?.title}</h1>

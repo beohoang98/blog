@@ -454,6 +454,7 @@ type File = Node & {
   readonly size: Scalars['Int'];
   readonly sourceInstanceName: Scalars['String'];
   readonly uid: Scalars['Int'];
+  readonly url: Maybe<Scalars['String']>;
 };
 
 
@@ -600,6 +601,7 @@ type FileFieldSelector = {
   readonly size: InputMaybe<FieldSelectorEnum>;
   readonly sourceInstanceName: InputMaybe<FieldSelectorEnum>;
   readonly uid: InputMaybe<FieldSelectorEnum>;
+  readonly url: InputMaybe<FieldSelectorEnum>;
 };
 
 type FileFilterInput = {
@@ -645,6 +647,7 @@ type FileFilterInput = {
   readonly size: InputMaybe<IntQueryOperatorInput>;
   readonly sourceInstanceName: InputMaybe<StringQueryOperatorInput>;
   readonly uid: InputMaybe<IntQueryOperatorInput>;
+  readonly url: InputMaybe<StringQueryOperatorInput>;
 };
 
 type FileGroupConnection = {
@@ -731,6 +734,7 @@ type FileSortInput = {
   readonly size: InputMaybe<SortOrderEnum>;
   readonly sourceInstanceName: InputMaybe<SortOrderEnum>;
   readonly uid: InputMaybe<SortOrderEnum>;
+  readonly url: InputMaybe<SortOrderEnum>;
 };
 
 type FloatQueryOperatorInput = {
@@ -745,8 +749,11 @@ type FloatQueryOperatorInput = {
 };
 
 type Frontmatter = {
+  readonly category: Maybe<Scalars['String']>;
   readonly date: Maybe<Scalars['Date']>;
   readonly description: Maybe<Scalars['String']>;
+  readonly image: Maybe<Scalars['String']>;
+  readonly tags: Maybe<ReadonlyArray<Maybe<Scalars['String']>>>;
   readonly title: Maybe<Scalars['String']>;
 };
 
@@ -759,20 +766,29 @@ type Frontmatter_dateArgs = {
 };
 
 type FrontmatterFieldSelector = {
+  readonly category: InputMaybe<FieldSelectorEnum>;
   readonly date: InputMaybe<FieldSelectorEnum>;
   readonly description: InputMaybe<FieldSelectorEnum>;
+  readonly image: InputMaybe<FieldSelectorEnum>;
+  readonly tags: InputMaybe<FieldSelectorEnum>;
   readonly title: InputMaybe<FieldSelectorEnum>;
 };
 
 type FrontmatterFilterInput = {
+  readonly category: InputMaybe<StringQueryOperatorInput>;
   readonly date: InputMaybe<DateQueryOperatorInput>;
   readonly description: InputMaybe<StringQueryOperatorInput>;
+  readonly image: InputMaybe<StringQueryOperatorInput>;
+  readonly tags: InputMaybe<StringQueryOperatorInput>;
   readonly title: InputMaybe<StringQueryOperatorInput>;
 };
 
 type FrontmatterSortInput = {
+  readonly category: InputMaybe<SortOrderEnum>;
   readonly date: InputMaybe<SortOrderEnum>;
   readonly description: InputMaybe<SortOrderEnum>;
+  readonly image: InputMaybe<SortOrderEnum>;
+  readonly tags: InputMaybe<SortOrderEnum>;
   readonly title: InputMaybe<SortOrderEnum>;
 };
 
@@ -1818,6 +1834,7 @@ type Query_fileArgs = {
   size: InputMaybe<IntQueryOperatorInput>;
   sourceInstanceName: InputMaybe<StringQueryOperatorInput>;
   uid: InputMaybe<IntQueryOperatorInput>;
+  url: InputMaybe<StringQueryOperatorInput>;
 };
 
 
@@ -2785,7 +2802,7 @@ type GatsbyImageSharpFluidLimitPresentationSizeFragment = { readonly maxHeight: 
 type IndexPageQueryQueryVariables = Exact<{ [key: string]: never; }>;
 
 
-type IndexPageQueryQuery = { readonly site: { readonly siteMetadata: { readonly title: string | null } | null } | null, readonly allMarkdownRemark: { readonly nodes: ReadonlyArray<{ readonly excerpt: string | null, readonly fields: { readonly slug: string | null } | null, readonly frontmatter: { readonly date: string | null, readonly title: string | null, readonly description: string | null } | null }> } };
+type IndexPageQueryQuery = { readonly site: { readonly siteMetadata: { readonly title: string | null } | null } | null, readonly allMarkdownRemark: { readonly nodes: ReadonlyArray<{ readonly excerpt: string | null, readonly fields: { readonly slug: string | null } | null, readonly frontmatter: { readonly date: string | null, readonly title: string | null, readonly description: string | null, readonly category: string | null, readonly tags: ReadonlyArray<string | null> | null } | null }> } };
 
 
 }

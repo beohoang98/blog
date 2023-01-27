@@ -33,8 +33,8 @@
     "Noto Color Emoji";
     --fontFamily-serif: "Lora", "Merriweather", "Georgia", Cambria, "Times New Roman",
     Times, serif;
-    --font-body: var(--fontFamily-serif);
-    --font-heading: var(--fontFamily-sans);
+    --font-body: var(--fontFamily-sans);
+    --font-heading: var(--fontFamily-serif);
     --fontWeight-light: 300;
     --fontWeight-normal: 400;
     --fontWeight-bold: 700;
@@ -58,7 +58,7 @@
     --color-text-light: #4f5969;
     --color-heading: #1a202c;
     --color-heading-black: black;
-    --color-accent: #d1dce5;
+    --color-accent: #c7c7c7;
 }
 
 .dark {
@@ -67,7 +67,7 @@
     --color-text-light: #cbd5e0;
     --color-heading: #f7fafc;
     --color-heading-black: #f7fafc;
-    --color-accent: #4a5568;
+    --color-accent: #434343;
 }
 
 /* HTML elements */
@@ -190,15 +190,13 @@ ol {
     margin-right: var(--spacing-0);
     padding: var(--spacing-0);
     margin-bottom: var(--spacing-8);
-    list-style-position: outside;
-    list-style-image: none;
+    padding-left: var(--spacing-8);
 }
 
 ul li,
 ol li {
     padding-left: var(--spacing-0);
     margin-bottom: calc(var(--spacing-8) / 2);
-    list-style-position: inside;
 }
 
 li > p {
@@ -317,6 +315,11 @@ a:focus {
     margin-bottom: var(--spacing-8);
     margin-top: var(--spacing-8);
 }
+.post-list-item-category {
+    font-weight: var(--fontWeight-normal);
+    font-size: var(--fontSize-2);
+    line-height: var(--lineHeight-relaxed);
+}
 
 .post-list-item p {
     margin-bottom: var(--spacing-0);
@@ -331,6 +334,18 @@ a:focus {
 
 .post-list-item header {
     margin-bottom: var(--spacing-4);
+}
+.post-list-item time {
+    font-size: var(--fontSize-0);
+}
+.post-list-item-tags {
+    display: inline-block;
+}
+.post-list-item-tags span {
+    padding: var(--spacing-1);
+    border-radius: var(--spacing-1);
+    background-color: var(--color-accent);
+    margin: 0 var(--spacing-1);
 }
 
 .header-link-home {

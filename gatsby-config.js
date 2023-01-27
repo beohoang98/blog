@@ -15,13 +15,13 @@ module.exports = {
     author: {
       name: `An Hoang`,
       summary: `Someone who can transform coffee into code.`,
-      image: `https://avatars.githubusercontent.com/u/24849960`
+      image: `https://avatars.githubusercontent.com/u/24849960`,
     },
     description: `A starter blog demonstrating what Gatsby can do.`,
     siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
     social: {
-      twitter: `BeoHoang3`
-    }
+      twitter: `BeoHoang3`,
+    },
   },
   plugins: [
     `gatsby-plugin-image`,
@@ -29,15 +29,15 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/content/blog`,
-        name: `blog`
-      }
+        name: `blog`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
-        path: `${__dirname}/src/images`
-      }
+        path: `${__dirname}/src/images`,
+      },
     },
     {
       resolve: `gatsby-transformer-remark`,
@@ -46,24 +46,24 @@ module.exports = {
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 630
-            }
+              maxWidth: 630,
+            },
           },
           {
             resolve: `gatsby-remark-responsive-iframe`,
             options: {
-              wrapperStyle: `margin-bottom: 1.0725rem`
-            }
+              wrapperStyle: `margin-bottom: 1.0725rem`,
+            },
           },
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
               showLineNumbers: true,
               noInlineHighlight: true,
-            }
-          }
-        ]
-      }
+            },
+          },
+        ],
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -91,7 +91,7 @@ module.exports = {
                   date: node.frontmatter.date,
                   url: site.siteMetadata.siteUrl + node.fields.slug,
                   guid: site.siteMetadata.siteUrl + node.fields.slug,
-                  custom_elements: [{ "content:encoded": node.html }]
+                  custom_elements: [{ "content:encoded": node.html }],
                 });
               });
             },
@@ -111,10 +111,10 @@ module.exports = {
               }
             }`,
             output: "/rss.xml",
-            title: "Gatsby Starter Blog RSS Feed"
-          }
-        ]
-      }
+            title: "Gatsby Starter Blog RSS Feed",
+          },
+        ],
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -125,21 +125,33 @@ module.exports = {
         background_color: `#ffffff`,
         // This will impact how browsers show your PWA/website
         // https://css-tricks.com/meta-theme-color-and-trickery/
-        theme_color: `#ab4110`,
-        display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png` // This path is relative to the root of the site.
-      }
+        theme_color: `#b84000`,
+        display: `standalone`,
+        icon: `/apple-touch-icon.png`, // This path is relative to the root of the site.
+        icons: [
+          {
+            src: "/android-chrome-192x192.png",
+            sizes: "192x192",
+            type: "image/png",
+          },
+          {
+            src: "/android-chrome-512x512.png",
+            sizes: "512x512",
+            type: "image/png",
+          },
+        ],
+      },
     },
     {
       resolve: `gatsby-plugin-web-font-loader`,
       options: {
         google: {
-          families: [`Lato`, `Lora`]
-        }
-      }
+          families: [`Lato`, `Lora`],
+        },
+      },
     },
     {
-      resolve: `gatsby-plugin-dark-mode`
-    }
-  ]
+      resolve: `gatsby-plugin-dark-mode`,
+    },
+  ],
 };

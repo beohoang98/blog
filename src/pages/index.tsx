@@ -6,7 +6,10 @@ import Layout from "../components/layout";
 import Seo from "../components/seo";
 import { FC } from "react";
 
-const BlogIndex: FC<PageProps<Queries.IndexPageQueryQuery>> = ({ data, location }) => {
+const BlogIndex: FC<PageProps<Queries.IndexPageQueryQuery>> = ({
+  data,
+  location,
+}) => {
   const siteTitle = data.site?.siteMetadata?.title || `Title`;
   const posts = data.allMarkdownRemark.nodes;
 
@@ -36,19 +39,35 @@ const BlogIndex: FC<PageProps<Queries.IndexPageQueryQuery>> = ({ data, location 
                 className="post-list-item"
                 itemScope
                 itemType="http://schema.org/Article"
+                role="article"
               >
                 <header>
                   <h2>
                     <Link to={post.fields?.slug || ""} itemProp="url">
+                      {!!post.frontmatter?.category && (
+                        <span className="post-list-item-category">
+                          [{post.frontmatter?.category}]{" "}
+                        </span>
+                      )}
                       <span itemProp="headline">{title}</span>
                     </Link>
                   </h2>
-                  <small>{post.frontmatter?.date}</small>
+                  <time dateTime={post.frontmatter?.date ?? undefined}>
+                    {post.frontmatter?.date}
+                  </time>
+                  {!!post.frontmatter?.tags && (
+                    <div className="post-list-item-tags">
+                      {post.frontmatter?.tags.map((tag) => (
+                        <span key={tag}>{tag}</span>
+                      ))}
+                    </div>
+                  )}
                 </header>
                 <section>
                   <p
                     dangerouslySetInnerHTML={{
-                      __html: post.frontmatter?.description || post.excerpt || "",
+                      __html:
+                        post.frontmatter?.description || post.excerpt || "",
                     }}
                     itemProp="description"
                   />
@@ -88,6 +107,8 @@ export const pageQuery = graphql`
           date(formatString: "MMMM DD, YYYY")
           title
           description
+          category
+          tags
         }
       }
     }
