@@ -16,7 +16,7 @@ const BlogPostTemplate: FC<PageProps<Queries.BlogPostBySlugQuery>> = ({
       <article
         className="blog-post"
         itemScope
-        itemType="http://schema.org/Article"
+        itemType="https://schema.org/Article"
         role="article"
       >
         <header>
