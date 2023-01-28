@@ -22,6 +22,7 @@ module.exports = {
     social: {
       twitter: `BeoHoang3`,
     },
+    facebookAppId: "451285087106438",
   },
   plugins: [
     `gatsby-plugin-image`,

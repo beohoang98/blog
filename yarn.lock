@@ -1410,7 +1410,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.0.0, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.20.7, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.9.2":
+"@babel/runtime@npm:^7.0.0, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.20.6, @babel/runtime@npm:^7.20.7, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.9.2":
   version: 7.20.13
   resolution: "@babel/runtime@npm:7.20.13"
   dependencies:
@@ -4067,6 +4067,7 @@ __metadata:
     prismjs: ^1.29.0
     react: ^18.1.0
     react-dom: ^18.1.0
+    react-facebook: ^9.0.12
     typescript: ^4.9.4
   languageName: unknown
   linkType: soft
@@ -11931,6 +11932,17 @@ __metadata:
   version: 6.0.11
   resolution: "react-error-overlay@npm:6.0.11"
   checksum: ce7b44c38fadba9cedd7c095cf39192e632daeccf1d0747292ed524f17dcb056d16bc197ddee5723f9dd888f0b9b19c3b486c430319e30504289b9296f2d2c42
+  languageName: node
+  linkType: hard
+
+"react-facebook@npm:^9.0.12":
+  version: 9.0.12
+  resolution: "react-facebook@npm:9.0.12"
+  dependencies:
+    "@babel/runtime": ^7.20.6
+  peerDependencies:
+    react: ">= 16"
+  checksum: b97c0f8f18d79d1173f944bed707f7b47fe01efaf37aee90bab5c6da8ad0f8015f51e7d7094c03cda38de8819269e825d835a74cef754fb4c22b34344f48a310
   languageName: node
   linkType: hard
 

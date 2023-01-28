@@ -24,7 +24,8 @@
     "gatsby-transformer-sharp": "^5.5.0",
     "prismjs": "^1.29.0",
     "react": "^18.1.0",
-    "react-dom": "^18.1.0"
+    "react-dom": "^18.1.0",
+    "react-facebook": "^9.0.12"
   },
   "devDependencies": {
     "prettier": "^2.8.3",

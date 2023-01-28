@@ -7,10 +7,12 @@ export const ThemeSwitch = () => {
     <ThemeToggler>
       {({ theme, toggleTheme }: any) => (
         <label className="theme-toggler">
-          <input type="checkbox"
-                 hidden
-                 onChange={e => toggleTheme(e.target.checked ? "dark" : "light")}
-                 checked={theme === "dark"} />
+          <input
+            type="checkbox"
+            hidden
+            onChange={(e) => toggleTheme(e.target.checked ? "dark" : "light")}
+            checked={theme === "dark"}
+          />
           <div className="switch-container">
             <div className="switch" />
           </div>

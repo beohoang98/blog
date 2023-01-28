@@ -4,6 +4,7 @@ import Bio from "../components/bio";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 import { FC } from "react";
+import { Comments } from "react-facebook";
 
 const BlogPostTemplate: FC<PageProps<Queries.BlogPostBySlugQuery>> = ({
   data: { previous, next, site, markdownRemark: post },
@@ -31,6 +32,7 @@ const BlogPostTemplate: FC<PageProps<Queries.BlogPostBySlugQuery>> = ({
         <footer>
           <Bio />
         </footer>
+        <Comments numPosts={5} orderBy={"reverse_time"} width="100%" />
       </article>
       <nav className="blog-post-nav">
         <ul
@@ -62,7 +64,9 @@ const BlogPostTemplate: FC<PageProps<Queries.BlogPostBySlugQuery>> = ({
   );
 };
 
-export const Head: FC<PageProps<Queries.BlogPostBySlugQuery>> = ({ data: { markdownRemark: post } }) => {
+export const Head: FC<PageProps<Queries.BlogPostBySlugQuery>> = ({
+  data: { markdownRemark: post },
+}) => {
   return (
     <Seo
       title={post?.frontmatter?.title || ""}

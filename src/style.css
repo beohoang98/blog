@@ -55,6 +55,7 @@
     --fontSize-7: 2.986rem;
     --color-primary: #b84000;
     --color-text: #2e353f;
+    --background-color: #f7fafc;
     --color-text-light: #4f5969;
     --color-heading: #1a202c;
     --color-heading-black: black;
@@ -64,6 +65,7 @@
 .dark {
     --color-primary: #ff8341;
     --color-text: #f7fafc;
+    --background-color: #1a202c;
     --color-text-light: #cbd5e0;
     --color-heading: #f7fafc;
     --color-heading-black: #f7fafc;
@@ -90,12 +92,14 @@ body {
     font-size: var(--fontSize-1);
     color: var(--color-text);
     position: relative;
+    background-color: var(--background-color, white);
     background-image: url("images/noise.svg");
     background-size: 200px 200px;
     background-repeat: repeat;
 }
 
 body.dark {
+    background-color: var(--background-color, black);
     background-image: url("images/noise-dark.svg");
 }
 
