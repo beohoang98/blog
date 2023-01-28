@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkblog=self.webpackChunkblog||[]).push([[883],{429:function(t,e,s){s.r(e),s.d(e,{Head:function(){return i}});var n=s(9379),o=s(4001),a=s(5893);const i=()=>(0,a.jsx)(o.Z,{title:"404: Not Found"});e.default=t=>{let{data:e,location:s}=t;const o=e.site.siteMetadata.title;return(0,a.jsxs)(n.Z,{location:s,title:o,children:[(0,a.jsx)("h1",{children:"404: Not Found"}),(0,a.jsx)("p",{children:"You just hit a route that doesn't exist... the sadness."})]})}}}]);
+//# sourceMappingURL=component---src-pages-404-js-799c30e48d51434f765d.js.map
