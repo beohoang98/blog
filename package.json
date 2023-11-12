@@ -10,7 +10,7 @@
   "dependencies": {
     "@fontsource/lato": "^4.5.10",
     "@fontsource/lora": "^4.5.13",
-    "gatsby": "^5.5.0",
+    "gatsby": "^5.9.1",
     "gatsby-plugin-dark-mode": "^1.1.2",
     "gatsby-plugin-feed": "^5.5.0",
     "gatsby-plugin-image": "^3.5.0",
